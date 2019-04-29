@@ -10,14 +10,14 @@ import android.widget.Toast;
 import technolifestyle.com.imageslider.FlipperLayout;
 import technolifestyle.com.imageslider.FlipperView;
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     FlipperLayout flipper;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home);
+        setContentView(R.layout.activity_home);
 
         flipper = (FlipperLayout) findViewById(R.id.flipper);
         setLayout();
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         medicine_alert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Alarmhome.class));
+                startActivity(new Intent(HomeActivity.this, Alarmhome.class));
             }
         });
 
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         emergency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, Emergency.class));
+                startActivity(new Intent(HomeActivity.this, Emergency.class));
             }
         });
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             view.setOnFlipperClickListener(new FlipperView.OnFlipperClickListener() {
                 @Override
                 public void onFlipperClick(FlipperView flipperView) {
-                    Toast.makeText(MainActivity.this, "" + (flipper.getCurrentPagePosition() + 1), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomeActivity.this, "" + (flipper.getCurrentPagePosition() + 1), Toast.LENGTH_SHORT).show();
                 }
             });
 

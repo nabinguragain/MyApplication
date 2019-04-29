@@ -9,7 +9,7 @@ public class Splash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash2);
+        setContentView(R.layout.activity_splash);
 
         Thread th= new Thread(){
 
@@ -22,7 +22,7 @@ public class Splash extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    Intent obj = new Intent(Splash.this, MainActivity.class);
+                    Intent obj = new Intent(Splash.this, LoginActivity.class);
                     startActivity(obj);
                 };
 
